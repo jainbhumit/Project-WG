@@ -1,19 +1,40 @@
 package models
 
-//	type CourseProgress struct {
-//		Course   string `json:"course_name"`
-//		Progress int    `json:"progress"` //percentage of how much complete
-//	}
+import "time"
+
 type User struct {
 	Username string `json:"username"`
 	Password string `json:"password"`
-	//CoursesProgress []CourseProgress `json:"courses_progress"`
+	Age      int    `json:"age"`
+	Mobile   string `json:"mobile"`
 }
 
-//type Course struct {
-//	Courses []struct {
-//		ID      string   `json:"id"`
-//		Title   string   `json:"title"`
-//		Lessons []string `json:"lessons"`
-//	} `json:"courses"`
-//}
+type Course struct {
+	Courses []struct {
+		ID      int    `json:"id"`
+		Title   string `json:"title"`
+		Lessons []struct {
+			ID    float32 `json:"id"`
+			Title string  `json:"title"`
+		} `json:"lessons"`
+	} `json:"courses"`
+}
+
+type Todo struct {
+	Username string   `json:"username"`
+	Tasks    []string `json:"tasks"`
+}
+
+type Progress struct {
+	Username string           `json:"username"`
+	Courses  []CourseProgress `json:"courses"`
+}
+
+type CourseProgress struct {
+	CourseID         int       `json:"course_id"`
+	CompletedLessons []float32 `json:"completed_lessons"`
+}
+type DailyStatus struct {
+	Date   time.Time `json:"date"`
+	Status string    `json:"status"`
+}

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"file/functionality"
+	"file/ui"
 	"fmt"
 )
 
@@ -9,16 +9,16 @@ func main() {
 	for {
 		fmt.Println("------------------------------------------------------------")
 		var choice string
-		fmt.Println("For SingUp press:  1")
+		fmt.Println("For SignUp press:  1")
 		fmt.Println("For Login press :  2")
 		fmt.Println("For Exit press	 :  3")
 		fmt.Scanln(&choice)
 
 		switch choice {
 		case "1":
-			functionality.SignUp()
+			ui.SignUp()
 		case "2":
-			functionality.Login()
+			ui.Login()
 		case "3":
 			return
 		default:

@@ -1,40 +1,76 @@
-//{
-//  "courses": [
-//    {
-//      "id": "course_001",
-//      "title": "Introduction to Golang",
-//      "lessons": [
-//        "Lesson 1: Getting Started",
-//        "Lesson 2: Variables and Types",
-//        "Lesson 3: Functions"
-//      ]
-//    },
-//    {
-//      "id": "course_002",
-//      "title": "Advanced Golang",
-//      "lessons": [
-//        "Lesson 1: Concurrency",
-//        "Lesson 2: Error Handling",
-//        "Lesson 3: Web Development"
-//      ]
-//    },
-//    {
-//      "id": "course_003",
-//      "title": "Frontend Development with Angular",
-//      "lessons": [
-//        "Lesson 1: Introduction to Angular",
-//        "Lesson 2: Components and Templates",
-//        "Lesson 3: Services and Dependency Injection"
-//      ]
-//    },
-//    {
-//      "id": "course_004",
-//      "title": "Fullstack Development with Go and Angular",
-//      "lessons": [
-//        "Lesson 1: Setting up the Project",
-//        "Lesson 2: Building RESTful APIs with Go",
-//        "Lesson 3: Integrating Go with Angular"
-//      ]
-//    }
-//  ]
-//}
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Introduction to Golang",
+      "lessons": [
+        {
+          "id": 1.1,
+          "title": "Getting Started"
+        },
+        {
+          "id": 1.2,
+          "title": "Variables and Types"
+        },
+        {
+          "id": 1.3,
+          "title": "Functions"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Advanced Golang",
+      "lessons": [
+        {
+          "id": 2.1,
+          "title": "Concurrency"
+        },
+        {
+          "id": 2.2,
+          "title": "Error Handling"
+        },
+        {
+          "id": 2.3,
+          "title": "Web Development"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Frontend Development with Angular",
+      "lessons": [
+        {
+          "id": 3.1,
+          "title": "Introduction to Angular"
+        },
+        {
+          "id": 3.2,
+          "title": "Components and Templates"
+        },
+        {
+          "id": 3.3,
+          "title": "Services and Dependency Injection"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Fullstack Development with Go and Angular",
+      "lessons": [
+        {
+          "id": 4.1,
+          "title": "Setting up the Project"
+        },
+        {
+          "id": 4.2,
+          "title": "Building RESTful APIs with Go"
+        },
+        {
+          "id": 4.3,
+          "title": "Integrating Go with Angular"
+        }
+      ]
+    }
+  ]
+}

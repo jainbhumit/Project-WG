@@ -6,10 +6,10 @@ import (
 	"io/ioutil"
 )
 
-func WriteUsers(users map[string]string) error {
+func WriteUsers(users map[string]models.User) error {
 	var userList []models.User
-	for username, password := range users {
-		userList = append(userList, models.User{Username: username, Password: password})
+	for _, user := range users {
+		userList = append(userList, user)
 	}
 
 	data, err := json.MarshalIndent(userList, "", "  ")

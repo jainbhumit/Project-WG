@@ -6,8 +6,10 @@ import (
 	"os"
 )
 
-func ReadUsers() (map[string]string, error) {
-	users := make(map[string]string)
+const fileName = "users.json"
+
+func ReadUsers() (map[string]models.User, error) {
+	users := make(map[string]models.User)
 	file, err := os.Open(fileName)
 	if err != nil {
 		if os.IsNotExist(err) {
@@ -24,7 +26,7 @@ func ReadUsers() (map[string]string, error) {
 	}
 
 	for _, user := range userList {
-		users[user.Username] = user.Password
+		users[user.Username] = user
 	}
 
 	return users, nil

@@ -1,0 +1,42 @@
+[
+  {
+    "username": "bhumitjain",
+    "courses": [
+      {
+        "course_id": 1,
+        "completed_lessons": [
+          1.1
+        ]
+      },
+      {
+        "course_id": 2,
+        "completed_lessons": [
+          2.2
+        ]
+      },
+      {
+        "course_id": 3,
+        "completed_lessons": [
+          3.3
+        ]
+      }
+    ],
+    "daily_statuses": null
+  },
+  {
+    "username": "garvit",
+    "courses": [
+      {
+        "course_id": 1,
+        "completed_lessons": []
+      },
+      {
+        "course_id": 2,
+        "completed_lessons": [
+          2
+        ]
+      }
+    ],
+    "daily_statuses": null
+  }
+]

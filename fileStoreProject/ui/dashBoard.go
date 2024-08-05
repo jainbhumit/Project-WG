@@ -1,0 +1,177 @@
+package ui
+
+import (
+	"file/functionality"
+	"file/models"
+	"file/util"
+	"fmt"
+)
+
+func ShowAssignCourse() {
+	fmt.Println("--------------------------Courses-------------------------------")
+	var assignCourse models.Course
+	util.LoadCourses(&assignCourse)
+	for _, c := range assignCourse.Courses {
+		fmt.Println("ID ", c.ID)
+		fmt.Println("Title ", c.Title)
+		for _, v := range c.Lessons {
+			fmt.Print("Lesson ID: ", v.ID)
+			fmt.Println(" Lesson Title:", v.Title)
+		}
+		fmt.Println("----------------------------------------")
+	}
+}
+
+func getTodo(username string) {
+
+	for {
+		fmt.Println("---------------------To Do List--------------------------------------")
+		fmt.Println("To view ToDo press 1")
+		fmt.Println("To Add in  ToDo press 2")
+		fmt.Println("To delete in  ToDo press 3")
+		fmt.Println("To go back press 4 ")
+		var choice int
+		fmt.Println("Enter your choice: ")
+		fmt.Scanf("%d", &choice)
+		switch choice {
+		case 1:
+			functionality.ShowToDo(username)
+			fmt.Println("-------------------------------------------")
+			break
+		case 2:
+			functionality.AddToDo(username)
+			fmt.Println("-------------------------------------------")
+			break
+		case 3:
+			functionality.DeleteToDo(username)
+			fmt.Println("-------------------------------------------")
+			break
+		case 4:
+			return
+		default:
+			fmt.Println("Enter Invalid Choice ")
+
+		}
+	}
+
+}
+func getProgress(username string) {
+	for {
+		fmt.Println("---------------------------Progress---------------------------------")
+		fmt.Println("To view Progress press 1")
+		fmt.Println("To Update in  Progress press 2")
+		fmt.Println("To go back press 3 ")
+		var choice int
+		fmt.Println("Enter your choice: ")
+		fmt.Scanf("%d", &choice)
+		switch choice {
+		case 1:
+			functionality.ShowUserProgress(username)
+			fmt.Println("----------------------------------------")
+			break
+		case 2:
+			err := functionality.UpdateUserProgress(username)
+			if err != nil {
+				return
+			}
+			break
+		case 3:
+			return
+
+		default:
+			fmt.Println("Invalid Choice")
+
+		}
+	}
+}
+func ViewProfile(username string) {
+	fmt.Println("--------------Profile-----------------------")
+	users, err := functionality.ReadUsers()
+	if err != nil {
+		fmt.Println("Error reading users:", err)
+		return
+	}
+
+	user, ok := users[username]
+	if !ok {
+		fmt.Println("User not found:", username)
+		return
+	}
+
+	fmt.Printf("Profile for %s:\n", username)
+	fmt.Printf("Username: %s\n", user.Username)
+	fmt.Printf("Age: %d\n", user.Age)
+	fmt.Printf("Mobile: %s\n", user.Mobile)
+}
+func getDailyStatus(username string) {
+
+	for {
+		fmt.Println("--------------Daily Status---------------")
+		fmt.Println("For Display press 1")
+		fmt.Println("For Update press 2")
+		fmt.Println("To go back press 3 ")
+
+		var choice int
+		fmt.Println("Enter your choice: ")
+		fmt.Scanf("%d", &choice)
+		switch choice {
+		case 1:
+			functionality.ShowDailyStatus(username)
+			fmt.Println("----------------------------------------")
+			break
+		case 2:
+			functionality.UpdateDailyStatus(username)
+			fmt.Println("-----------------------------------------")
+			break
+		case 3:
+			return
+		default:
+			fmt.Println("Invalid Choice")
+		}
+	}
+
+}
+func DashBoard(username string) {
+
+	fmt.Println("---------------------Dash Board--------------------------------------")
+
+	for {
+		fmt.Println("For view assigned courses press 1")
+		fmt.Println("For view profile press 2")
+		fmt.Println("For Open ToDo press 3")
+		fmt.Println("For checking progress press 4")
+		fmt.Println("For Daily status press 5")
+		fmt.Println("For exit press 6")
+		var choice int
+		fmt.Println("Enter your choice: ")
+		fmt.Scanf("%d", &choice)
+		switch choice {
+		case 1:
+			ShowAssignCourse()
+			fmt.Println("---------------------------------------------")
+			break
+		case 2:
+			ViewProfile(username)
+			fmt.Println("---------------------------------------------")
+			break
+		case 3:
+			getTodo(username)
+			fmt.Println("---------------------------------------------")
+			break
+		case 4:
+			getProgress(username)
+			fmt.Println("---------------------------------------------")
+			break
+		case 5:
+			getDailyStatus(username)
+			fmt.Println("---------------------------------------------")
+			break
+		case 6:
+			return
+		default:
+			fmt.Println("Enter Invalid Choice ")
+
+		}
+	}
+
+}
