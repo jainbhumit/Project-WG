@@ -1,3 +1,0 @@
-bjain:$2a$10$94zIC1haZKkPxkNwvRIPDOjL6Slk9bpV2W49N67mw55HlE5wtnMom
-Bhumit:$2a$10$rMbinv.WbIUoyYKPOURhDu4OFThWOgqBK/YL8a6PPtNBjrnh6BKVu
-gaurav:$2a$10$HLmwEF/4WiF6XXwgaVo5NefiYkFwPnQAJvYXZtpTnTaIQ9JIgKcNC

@@ -1,21 +1,26 @@
 package main
 
-import "fmt"
+import (
+	"file/functionality"
+	"fmt"
+)
 
 func main() {
 	for {
 		fmt.Println("------------------------------------------------------------")
 		var choice string
-		fmt.Println("To start or Continue press 1")
-		fmt.Println("To End press 0")
-		fmt.Println("Enter your Choice : ")
+		fmt.Println("For SingUp press:  1")
+		fmt.Println("For Login press :  2")
+		fmt.Println("For Exit press	 :  3")
 		fmt.Scanln(&choice)
 
 		switch choice {
-		case "0":
-			return
 		case "1":
-			Doing()
+			functionality.SignUp()
+		case "2":
+			functionality.Login()
+		case "3":
+			return
 		default:
 			fmt.Println("Invalid choice")
 
