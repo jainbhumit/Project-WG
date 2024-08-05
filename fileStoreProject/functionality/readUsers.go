@@ -1,15 +1,14 @@
-package userRepo
+package functionality
 
 import (
 	"encoding/json"
-	"file/functionality"
 	"file/models"
 	"os"
 )
 
 func ReadUsers() (map[string]string, error) {
 	users := make(map[string]string)
-	file, err := os.Open(functionality.fileName)
+	file, err := os.Open(fileName)
 	if err != nil {
 		if os.IsNotExist(err) {
 			return users, nil // File doesn't exist, return empty map

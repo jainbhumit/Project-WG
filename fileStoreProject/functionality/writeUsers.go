@@ -1,8 +1,7 @@
-package userRepo
+package functionality
 
 import (
 	"encoding/json"
-	"file/functionality"
 	"file/models"
 	"io/ioutil"
 )
@@ -18,5 +17,5 @@ func WriteUsers(users map[string]string) error {
 		return err
 	}
 
-	return ioutil.WriteFile(functionality.fileName, data, 0644)
+	return ioutil.WriteFile(fileName, data, 0644)
 }

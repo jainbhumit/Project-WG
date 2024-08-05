@@ -1,7 +1,6 @@
 package functionality
 
 import (
-	"file/userRepo"
 	"fmt"
 	"golang.org/x/crypto/bcrypt"
 	"unicode"
@@ -44,7 +43,7 @@ func SignUp() {
 		fmt.Println("Enter the strong password as it does not meet our credential")
 		return
 	}
-	users, err := userRepo.ReadUsers()
+	users, err := ReadUsers()
 	if err != nil {
 		fmt.Println("Error reading users:", err)
 		return
@@ -66,7 +65,7 @@ func SignUp() {
 				// Add the new user to the map
 				users[username] = string(newPassword)
 
-				err = userRepo.WriteUsers(users)
+				err = WriteUsers(users)
 				if err != nil {
 					fmt.Println("Error writing user:", err)
 					return
@@ -88,7 +87,7 @@ func Login() {
 	fmt.Print("Enter password: ")
 	fmt.Scanln(&password)
 
-	users, err := userRepo.ReadUsers()
+	users, err := ReadUsers()
 	if err != nil {
 		fmt.Println("Error reading users:", err)
 		return

@@ -9,3 +9,11 @@ type User struct {
 	Password string `json:"password"`
 	//CoursesProgress []CourseProgress `json:"courses_progress"`
 }
+
+//type Course struct {
+//	Courses []struct {
+//		ID      string   `json:"id"`
+//		Title   string   `json:"title"`
+//		Lessons []string `json:"lessons"`
+//	} `json:"courses"`
+//}

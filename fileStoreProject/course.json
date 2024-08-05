@@ -1,0 +1,40 @@
+//{
+//  "courses": [
+//    {
+//      "id": "course_001",
+//      "title": "Introduction to Golang",
+//      "lessons": [
+//        "Lesson 1: Getting Started",
+//        "Lesson 2: Variables and Types",
+//        "Lesson 3: Functions"
+//      ]
+//    },
+//    {
+//      "id": "course_002",
+//      "title": "Advanced Golang",
+//      "lessons": [
+//        "Lesson 1: Concurrency",
+//        "Lesson 2: Error Handling",
+//        "Lesson 3: Web Development"
+//      ]
+//    },
+//    {
+//      "id": "course_003",
+//      "title": "Frontend Development with Angular",
+//      "lessons": [
+//        "Lesson 1: Introduction to Angular",
+//        "Lesson 2: Components and Templates",
+//        "Lesson 3: Services and Dependency Injection"
+//      ]
+//    },
+//    {
+//      "id": "course_004",
+//      "title": "Fullstack Development with Go and Angular",
+//      "lessons": [
+//        "Lesson 1: Setting up the Project",
+//        "Lesson 2: Building RESTful APIs with Go",
+//        "Lesson 3: Integrating Go with Angular"
+//      ]
+//    }
+//  ]
+//}
