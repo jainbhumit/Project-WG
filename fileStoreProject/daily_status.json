@@ -5,6 +5,19 @@
       {
         "date": "2024-08-05T05:30:00+05:30",
         "status": "implement go handas on"
+      },
+      {
+        "date": "2024-08-06T05:30:00+05:30",
+        "status": "clean code"
+      }
+    ]
+  },
+  {
+    "username": "alok",
+    "daily_statuses": [
+      {
+        "date": "2024-08-06T05:30:00+05:30",
+        "status": "completed cloud firm"
       }
     ]
   }

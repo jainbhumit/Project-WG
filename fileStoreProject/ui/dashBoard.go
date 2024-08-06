@@ -1,7 +1,7 @@
 package ui
 
 import (
-	"file/functionality"
+	"file/component"
 	"file/models"
 	"file/util"
 	"fmt"
@@ -35,15 +35,15 @@ func getTodo(username string) {
 		fmt.Scanf("%d", &choice)
 		switch choice {
 		case 1:
-			functionality.ShowToDo(username)
+			component.ShowToDo(username)
 			fmt.Println("-------------------------------------------")
 			break
 		case 2:
-			functionality.AddToDo(username)
+			component.AddToDo(username)
 			fmt.Println("-------------------------------------------")
 			break
 		case 3:
-			functionality.DeleteToDo(username)
+			component.DeleteToDo(username)
 			fmt.Println("-------------------------------------------")
 			break
 		case 4:
@@ -66,11 +66,11 @@ func getProgress(username string) {
 		fmt.Scanf("%d", &choice)
 		switch choice {
 		case 1:
-			functionality.ShowUserProgress(username)
+			component.ShowUserProgress(username)
 			fmt.Println("----------------------------------------")
 			break
 		case 2:
-			err := functionality.UpdateUserProgress(username)
+			err := component.UpdateUserProgress(username)
 			if err != nil {
 				return
 			}
@@ -86,7 +86,7 @@ func getProgress(username string) {
 }
 func ViewProfile(username string) {
 	fmt.Println("--------------Profile-----------------------")
-	users, err := functionality.ReadUsers()
+	users, err := component.ReadUsers()
 	if err != nil {
 		fmt.Println("Error reading users:", err)
 		return
@@ -116,11 +116,11 @@ func getDailyStatus(username string) {
 		fmt.Scanf("%d", &choice)
 		switch choice {
 		case 1:
-			functionality.ShowDailyStatus(username)
+			component.ShowDailyStatus(username)
 			fmt.Println("----------------------------------------")
 			break
 		case 2:
-			functionality.UpdateDailyStatus(username)
+			component.UpdateDailyStatus(username)
 			fmt.Println("-----------------------------------------")
 			break
 		case 3:
@@ -132,7 +132,7 @@ func getDailyStatus(username string) {
 
 }
 func DashBoard(username string) {
-
+	//var wg sync.WaitGroup
 	fmt.Println("---------------------Dash Board--------------------------------------")
 
 	for {
@@ -147,25 +147,42 @@ func DashBoard(username string) {
 		fmt.Scanf("%d", &choice)
 		switch choice {
 		case 1:
+			//wg.Add(1)
+			//defer wg.Done()
 			ShowAssignCourse()
+
 			fmt.Println("---------------------------------------------")
-			break
 		case 2:
+			//wg.Add(1)
+			//defer wg.Done()
+
 			ViewProfile(username)
+
 			fmt.Println("---------------------------------------------")
-			break
+
 		case 3:
+			//wg.Add(1)
+			//defer wg.Done()
+
 			getTodo(username)
+
 			fmt.Println("---------------------------------------------")
-			break
+
 		case 4:
+			//wg.Add(1)
+			//defer wg.Done()
+
 			getProgress(username)
+
 			fmt.Println("---------------------------------------------")
 			break
 		case 5:
+			//wg.Add(1)
+			//defer wg.Done()
+
 			getDailyStatus(username)
+
 			fmt.Println("---------------------------------------------")
-			break
 		case 6:
 			return
 		default:

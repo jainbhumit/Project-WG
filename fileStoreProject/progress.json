@@ -1,42 +1,116 @@
 [
   {
-    "username": "bhumitjain",
+    "username": "meet",
     "courses": [
       {
         "course_id": 1,
         "completed_lessons": [
           1.1
-        ]
+        ],
+        "total_lessons": 12
+      }
+    ]
+  },
+  {
+    "username": "aman",
+    "courses": [
+      {
+        "course_id": 1,
+        "completed_lessons": [],
+        "total_lessons": 0
+      },
+      {
+        "course_id": 3,
+        "completed_lessons": [
+          3.1
+        ],
+        "total_lessons": 0
+      }
+    ]
+  },
+  {
+    "username": "alok",
+    "courses": [
+      {
+        "course_id": 1,
+        "completed_lessons": [],
+        "total_lessons": 0
+      }
+    ]
+  },
+  {
+    "username": "bhumitjain",
+    "courses": [
+      {
+        "course_id": 1,
+        "completed_lessons": [
+          1.1,
+          1.2
+        ],
+        "total_lessons": 0
       },
       {
         "course_id": 2,
         "completed_lessons": [
           2.2
-        ]
+        ],
+        "total_lessons": 0
       },
       {
         "course_id": 3,
         "completed_lessons": [
           3.3
-        ]
+        ],
+        "total_lessons": 0
       }
-    ],
-    "daily_statuses": null
+    ]
+  },
+  {
+    "username": "raj",
+    "courses": [
+      {
+        "course_id": 1,
+        "completed_lessons": [],
+        "total_lessons": 0
+      }
+    ]
   },
   {
     "username": "garvit",
     "courses": [
       {
         "course_id": 1,
-        "completed_lessons": []
+        "completed_lessons": [],
+        "total_lessons": 0
       },
       {
         "course_id": 2,
         "completed_lessons": [
           2
-        ]
+        ],
+        "total_lessons": 0
       }
-    ],
-    "daily_statuses": null
+    ]
+  },
+  {
+    "username": "bhumit",
+    "courses": [
+      {
+        "course_id": 1,
+        "completed_lessons": [
+          1.1,
+          1.2
+        ],
+        "total_lessons": 12
+      },
+      {
+        "course_id": 2,
+        "completed_lessons": [
+          2,
+          2.2
+        ],
+        "total_lessons": 12
+      }
+    ]
   }
 ]

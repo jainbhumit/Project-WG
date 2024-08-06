@@ -1,4 +1,4 @@
-package functionality
+package component
 
 import (
 	"encoding/json"
@@ -67,10 +67,24 @@ func ShowUserProgress(username string) {
 	}
 
 	fmt.Printf("Progress for %s:\n", username)
+	completed, total := func() (int, int) {
+		var totalCompleted int
+		var totalLessons int
+		for _, course := range progress.Courses {
+			if totalLessons == 0 {
+				totalLessons = course.TotalLessons
+			}
+			totalCompleted += len(course.CompletedLessons)
+		}
+		return totalCompleted, totalLessons
+	}()
+	percentage := float64(completed) / float64(total) * 100
 	for _, course := range progress.Courses {
 		fmt.Printf("Course ID: %d\n", course.CourseID)
 		fmt.Printf("Completed Lessons: %v\n", course.CompletedLessons)
 	}
+	fmt.Printf("Progress: %.2f%%\n", percentage)
+
 }
 func UpdateUserProgress(username string) error {
 	var courseID int
@@ -117,6 +131,7 @@ func UpdateUserProgress(username string) error {
 		newCourse := models.CourseProgress{
 			CourseID:         courseID,
 			CompletedLessons: []float32{lessonID},
+			TotalLessons:     12,
 		}
 		progress.Courses = append(progress.Courses, newCourse)
 	}

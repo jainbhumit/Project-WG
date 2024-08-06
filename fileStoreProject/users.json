@@ -1,43 +1,7 @@
 [
   {
-    "username": "anish",
-    "password": "$2a$10$bPieG3b2taQh1CwXNsxI5uGwfARoUTOXw/NWgF1c1DcWaSiKNP3.a",
-    "age": 0,
-    "mobile": ""
-  },
-  {
     "username": "riya",
     "password": "$2a$10$oOku7rV.9guQ/VkpEey0Yuhn4Z3qFv3bXg.5PRyzGTcCgc5nrk.xe",
-    "age": 0,
-    "mobile": ""
-  },
-  {
-    "username": "rishabh",
-    "password": "$2a$10$I23NgKYyLZY9ze7ZuYZTvemGtlJE25BN57LmjrM3S7vo1XJ1DCTy2",
-    "age": 0,
-    "mobile": ""
-  },
-  {
-    "username": "gaurav",
-    "password": "$2a$10$79TVXtWIHVEjYsf9bE0gGetCc93kvAJ.u0RjdqOlx6XrZPuL79J8a",
-    "age": 0,
-    "mobile": ""
-  },
-  {
-    "username": "bhumit",
-    "password": "$2a$10$yi9YjPEUKFSHQDK/FZ5Se.EsPpUF7DbQ6pkPiNYnU.XU38AI3eeIq",
-    "age": 0,
-    "mobile": ""
-  },
-  {
-    "username": "1234",
-    "password": "$2a$10$obBD/40HXabPuCymXhH4Nus9G7xMFgxc38vanGCi/qOlmFFlYetcq",
-    "age": 0,
-    "mobile": ""
-  },
-  {
-    "username": "bhumitjain",
-    "password": "$2a$10$u0sg8zmDMN/IhFWDqWiCCOvBtWg5s6pZPErraR6NrZf8kVsu4bsHC",
     "age": 0,
     "mobile": ""
   },
@@ -48,15 +12,75 @@
     "mobile": ""
   },
   {
+    "username": "gaurav",
+    "password": "$2a$10$79TVXtWIHVEjYsf9bE0gGetCc93kvAJ.u0RjdqOlx6XrZPuL79J8a",
+    "age": 0,
+    "mobile": ""
+  },
+  {
+    "username": "bhumitjain",
+    "password": "$2a$10$u0sg8zmDMN/IhFWDqWiCCOvBtWg5s6pZPErraR6NrZf8kVsu4bsHC",
+    "age": 0,
+    "mobile": ""
+  },
+  {
+    "username": "rishabh",
+    "password": "$2a$10$I23NgKYyLZY9ze7ZuYZTvemGtlJE25BN57LmjrM3S7vo1XJ1DCTy2",
+    "age": 0,
+    "mobile": ""
+  },
+  {
     "username": "tushar",
     "password": "$2a$10$bVhqWlh3b9Sfd0xxU50cNe6z.sBLrxhvB4aMKirmXKzt8AG/BVnNW",
     "age": 0,
     "mobile": ""
   },
   {
+    "username": "anish",
+    "password": "$2a$10$bPieG3b2taQh1CwXNsxI5uGwfARoUTOXw/NWgF1c1DcWaSiKNP3.a",
+    "age": 0,
+    "mobile": ""
+  },
+  {
+    "username": "alok",
+    "password": "$2a$10$tW609nkS8JHtGCeews5XiuUiy97P1L9Z5Lh4UU09EPqeP/hiK4YYO",
+    "age": 21,
+    "mobile": "6396098067"
+  },
+  {
+    "username": "1234",
+    "password": "$2a$10$obBD/40HXabPuCymXhH4Nus9G7xMFgxc38vanGCi/qOlmFFlYetcq",
+    "age": 0,
+    "mobile": ""
+  },
+  {
+    "username": "bhumit",
+    "password": "$2a$10$yi9YjPEUKFSHQDK/FZ5Se.EsPpUF7DbQ6pkPiNYnU.XU38AI3eeIq",
+    "age": 0,
+    "mobile": ""
+  },
+  {
+    "username": "aman",
+    "password": "$2a$10$jZlqclO7KnXDkDWYGOO2cOA5vb09xxzfe00PPRlfS.YYKrgh.Qct2",
+    "age": 21,
+    "mobile": "9876545362"
+  },
+  {
+    "username": "raj",
+    "password": "$2a$10$n8jinkHuv7cbSkWjAi2E8.ypNW/hkt01LrQcPx11viVa1CZEUEDhS",
+    "age": 18,
+    "mobile": "8696131411"
+  },
+  {
     "username": "garvit",
     "password": "$2a$10$iXg93cpD/WHbYXVByUbCS.ToLngi/4e4cjTF67qEZ9sby8144PmTK",
     "age": 20,
     "mobile": "8209939823"
+  },
+  {
+    "username": "meet",
+    "password": "$2a$10$4ocgCb83T8KoO6vwzzpGy.YvyArWaiFHqJeLf2DRcPmNCfC1mksMq",
+    "age": 20,
+    "mobile": "8955412565"
   }
 ]
