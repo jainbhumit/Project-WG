@@ -1,4 +1,4 @@
-package component
+package functionality
 
 import (
 	"bufio"
@@ -11,12 +11,12 @@ import (
 	"time"
 )
 
-const dailyStatusFile = "daily_status.json"
+var DailyStatusFile = "daily_status.json"
 
 // ReadDailyStatus reads daily status from a file
 func ReadDailyStatus() (map[string][]models.DailyStatus, error) {
 	statusMap := make(map[string][]models.DailyStatus)
-	file, err := os.Open(dailyStatusFile)
+	file, err := os.Open(DailyStatusFile)
 	if err != nil {
 		if os.IsNotExist(err) {
 			return statusMap, nil // File doesn't exist, return empty map
@@ -64,7 +64,7 @@ func WriteDailyStatus(statusMap map[string][]models.DailyStatus) error {
 		return err
 	}
 
-	return ioutil.WriteFile(dailyStatusFile, data, 0644)
+	return ioutil.WriteFile(DailyStatusFile, data, 0644)
 }
 
 // UpdateDailyStatus updates the daily status for a user

@@ -1,4 +1,4 @@
-package component
+package functionality
 
 import (
 	"bufio"
@@ -10,11 +10,11 @@ import (
 	"strings"
 )
 
-const todoFileName = "todos.json"
+var TodoFileName = "todos.json"
 
 func ReadTodos(username string) (models.Todo, error) {
 	todos := models.Todo{Username: username}
-	file, err := os.Open(todoFileName)
+	file, err := os.Open(TodoFileName)
 	if err != nil {
 		if os.IsNotExist(err) {
 			return todos, nil // File doesn't exist, return empty list of todo
@@ -62,12 +62,12 @@ func WriteTodos(todo models.Todo) error {
 		return err
 	}
 
-	return ioutil.WriteFile(todoFileName, data, 0644)
+	return ioutil.WriteFile(TodoFileName, data, 0644)
 }
 
 func ReadAllTodos() ([]models.Todo, error) {
 	var todoList []models.Todo
-	file, err := os.Open(todoFileName)
+	file, err := os.Open(TodoFileName)
 	if err != nil {
 		if os.IsNotExist(err) {
 			return todoList, nil // File doesn't exist, return empty slice

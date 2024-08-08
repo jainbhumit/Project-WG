@@ -2,7 +2,7 @@ package ui
 
 import (
 	"errors"
-	"file/component"
+	"file/functionality"
 	"file/models"
 	"fmt"
 	"golang.org/x/crypto/bcrypt"
@@ -38,7 +38,7 @@ func IsValidPassword(password string) bool {
 	return hasUpper && hasLower && hasDigit && hasSpecial
 }
 
-func isValidMobile(s string) bool {
+func IsValidMobile(s string) bool {
 
 	// Check if the phone number is numeric
 	if _, err := strconv.Atoi(s); err != nil {
@@ -68,7 +68,7 @@ func AddUser(users map[string]models.User, username string, password string) err
 		fmt.Println("Enter Mobile Number : ")
 
 		fmt.Scanln(&mobile)
-		if !isValidMobile(mobile) {
+		if !IsValidMobile(mobile) {
 			fmt.Println("Invalid Mobile Number")
 			continue
 		} else {
@@ -88,7 +88,7 @@ func AddUser(users map[string]models.User, username string, password string) err
 		Mobile:   mobile,
 	}
 
-	err = component.WriteUsers(users)
+	err = functionality.WriteUsers(users)
 	if err != nil {
 		fmt.Println("Error writing user:", err)
 		return errors.New("SignUp Fail")
@@ -108,7 +108,7 @@ func AddUser(users map[string]models.User, username string, password string) err
 			},
 		}
 
-		err = component.WriteProgress(progress)
+		err = functionality.WriteProgress(progress)
 		if err != nil {
 			fmt.Println("Error initializing progress:", err)
 			return
@@ -126,7 +126,7 @@ func SignUp() {
 	fmt.Print("Enter username: ")
 	fmt.Scanln(&username)
 
-	users, err := component.ReadUsers()
+	users, err := functionality.ReadUsers()
 	if err != nil {
 		fmt.Println("Error reading users:", err)
 		return
@@ -168,7 +168,7 @@ func Login() {
 	fmt.Print("Enter password: ")
 	fmt.Scanln(&password)
 
-	users, err := component.ReadUsers()
+	users, err := functionality.ReadUsers()
 	if err != nil {
 		fmt.Println("Error reading users:", err)
 		return

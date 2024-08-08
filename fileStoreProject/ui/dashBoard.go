@@ -1,7 +1,7 @@
 package ui
 
 import (
-	"file/component"
+	"file/functionality"
 	"file/models"
 	"file/util"
 	"fmt"
@@ -35,15 +35,15 @@ func getTodo(username string) {
 		fmt.Scanf("%d", &choice)
 		switch choice {
 		case 1:
-			component.ShowToDo(username)
+			functionality.ShowToDo(username)
 			fmt.Println("-------------------------------------------")
 			break
 		case 2:
-			component.AddToDo(username)
+			functionality.AddToDo(username)
 			fmt.Println("-------------------------------------------")
 			break
 		case 3:
-			component.DeleteToDo(username)
+			functionality.DeleteToDo(username)
 			fmt.Println("-------------------------------------------")
 			break
 		case 4:
@@ -66,11 +66,11 @@ func getProgress(username string) {
 		fmt.Scanf("%d", &choice)
 		switch choice {
 		case 1:
-			component.ShowUserProgress(username)
+			functionality.ShowUserProgress(username)
 			fmt.Println("----------------------------------------")
 			break
 		case 2:
-			err := component.UpdateUserProgress(username)
+			err := functionality.UpdateUserProgress(username)
 			if err != nil {
 				return
 			}
@@ -86,7 +86,7 @@ func getProgress(username string) {
 }
 func ViewProfile(username string) {
 	fmt.Println("--------------Profile-----------------------")
-	users, err := component.ReadUsers()
+	users, err := functionality.ReadUsers()
 	if err != nil {
 		fmt.Println("Error reading users:", err)
 		return
@@ -116,11 +116,11 @@ func getDailyStatus(username string) {
 		fmt.Scanf("%d", &choice)
 		switch choice {
 		case 1:
-			component.ShowDailyStatus(username)
+			functionality.ShowDailyStatus(username)
 			fmt.Println("----------------------------------------")
 			break
 		case 2:
-			component.UpdateDailyStatus(username)
+			functionality.UpdateDailyStatus(username)
 			fmt.Println("-----------------------------------------")
 			break
 		case 3:

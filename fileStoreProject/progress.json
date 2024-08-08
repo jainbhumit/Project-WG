@@ -1,44 +1,5 @@
 [
   {
-    "username": "meet",
-    "courses": [
-      {
-        "course_id": 1,
-        "completed_lessons": [
-          1.1
-        ],
-        "total_lessons": 12
-      }
-    ]
-  },
-  {
-    "username": "aman",
-    "courses": [
-      {
-        "course_id": 1,
-        "completed_lessons": [],
-        "total_lessons": 0
-      },
-      {
-        "course_id": 3,
-        "completed_lessons": [
-          3.1
-        ],
-        "total_lessons": 0
-      }
-    ]
-  },
-  {
-    "username": "alok",
-    "courses": [
-      {
-        "course_id": 1,
-        "completed_lessons": [],
-        "total_lessons": 0
-      }
-    ]
-  },
-  {
     "username": "bhumitjain",
     "courses": [
       {
@@ -66,12 +27,37 @@
     ]
   },
   {
-    "username": "raj",
+    "username": "garima",
+    "courses": [
+      {
+        "course_id": 1,
+        "completed_lessons": [
+          1.1
+        ],
+        "total_lessons": 12
+      }
+    ]
+  },
+  {
+    "username": "alok",
     "courses": [
       {
         "course_id": 1,
         "completed_lessons": [],
         "total_lessons": 0
+      }
+    ]
+  },
+  {
+    "username": "praveen",
+    "courses": [
+      {
+        "course_id": 1,
+        "completed_lessons": [
+          1.1,
+          1.2
+        ],
+        "total_lessons": 12
       }
     ]
   },
@@ -93,6 +79,35 @@
     ]
   },
   {
+    "username": "aman",
+    "courses": [
+      {
+        "course_id": 1,
+        "completed_lessons": [],
+        "total_lessons": 0
+      },
+      {
+        "course_id": 3,
+        "completed_lessons": [
+          3.1
+        ],
+        "total_lessons": 0
+      }
+    ]
+  },
+  {
+    "username": "meet",
+    "courses": [
+      {
+        "course_id": 1,
+        "completed_lessons": [
+          1.1
+        ],
+        "total_lessons": 12
+      }
+    ]
+  },
+  {
     "username": "bhumit",
     "courses": [
       {
@@ -110,6 +125,16 @@
           2.2
         ],
         "total_lessons": 12
+      }
+    ]
+  },
+  {
+    "username": "raj",
+    "courses": [
+      {
+        "course_id": 1,
+        "completed_lessons": [],
+        "total_lessons": 0
       }
     ]
   }

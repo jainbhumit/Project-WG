@@ -1,4 +1,4 @@
-package component
+package functionality
 
 import (
 	"encoding/json"
@@ -8,11 +8,11 @@ import (
 	"os"
 )
 
-const progressfile = "progress.json"
+var Progressfile = "progress.json"
 
 func ReadProgress() (map[string]models.Progress, error) {
 	progress := make(map[string]models.Progress)
-	file, err := os.Open(progressfile)
+	file, err := os.Open(Progressfile)
 	if err != nil {
 		if os.IsNotExist(err) {
 			return progress, nil // File doesn't exist, return empty map
@@ -51,7 +51,7 @@ func WriteProgress(progress models.Progress) error {
 		return err
 	}
 
-	return ioutil.WriteFile(progressfile, data, 0644)
+	return ioutil.WriteFile(Progressfile, data, 0644)
 }
 func ShowUserProgress(username string) {
 	progressList, err := ReadProgress()
